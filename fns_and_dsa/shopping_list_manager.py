@@ -7,7 +7,7 @@ def display_menu():
 
 
 def add_item(shopping_list):
-    item = input("Enter an item you want to add to the list :")
+    item = input("Enter the item to add:")
     shopping_list.append(item)
 
 def remove_item(shopping_list):
@@ -27,21 +27,21 @@ def main():
     shopping_list = []
     while True:
         display_menu()
-        choice = int(input("Enter your choice: "))
+        choice = input("Enter your choice: ")
 
-        if choice == 1:
+        if choice == '1':
             # Prompt for and add an item
             add_item(shopping_list)
             pass
-        elif choice == 2:
+        elif choice == '2':
             # Prompt for and remove an item
             remove_item(shopping_list)
             pass
-        elif choice == 3:
+        elif choice == '3':
             # Display the shopping list
             displayItems(shopping_list)
             pass
-        elif choice == 4:
+        elif choice == '4':
             print("Goodbye!")
             break
         else:
